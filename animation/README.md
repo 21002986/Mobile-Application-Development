@@ -1,30 +1,101 @@
-# Ex.No: 11 Develop a application to add animations to ImageView,Move,blink,fade,clockwise,zoom,slide operations are perform in android studio.
+# Ex.No:10 To create a option menu to display menu items.
 
 
 ## AIM:
 
-To develop a application to add animation to imageview,move,blink,fade,clockwise,zoom,slide operation using Android Studio.
+To create a option menu to display menu items using Android Studio.
 
 ## EQUIPMENTS REQUIRED:
 
-Android Studio(Latest Version)
+Latest Version Android Studio
 
 ## ALGORITHM:
 
+Step 1: Open Android Stdio and then click on File -> New -> New project.
 
+Step 2: Then type the Application name as “optionmenu″ and click Next.
+
+Step 3: Then select the Minimum SDK as shown below and click Next.
+
+Step 4: Then select the Empty Activity and click Next. Finally click Finish.
+
+Step 5: Design layout in activity_main.xml.
+
+Step 6: Design option layout in option.xml.
+
+Step 7: Add and Display option menu in MainActivity file.
+
+Step 8: Save and run the application.
 
 ## PROGRAM:
 ```
 /*
-Program to display animation operation”.
-Developed by:
-Registeration Number :
+Program to print the text “optionmenu”.
+Developed by: sai vinay
+Registeration Number : 212221040069
 */
 ```
 
-## OUTPUT
+**Activity_xml File:**
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/amgus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+**OPTION XML CODE:**
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="PRIME 1" />
+    <item android:title="PRIME 2" />
+    <item android:title="PRIME 3" />
+    </menu>
+
+**MainActivity.java File:**
+
+      package com.example.menuapp;
+
+    import androidx.appcompat.app.AppCompatActivity;
+
+    import android.os.Bundle;
+    import android.view.Menu;
+    import android.view.MenuInflater;
+
+    public class MainActivity extends AppCompatActivity {
+     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater m = getMenuInflater();
+        m.inflate(R.menu.option,menu);
+        return true;
+    }
+    }
+
+## OUTPUT:
+
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/91502059-7bfa-400e-b245-bccb7255d188)  
+![image](https://github.com/nithish143257/Mobile-Application-Development/assets/113762839/40655ae9-d214-4945-b378-947b6b1baf2b)
 
 
-
-
-## RESULT
+## RESULT:
+Thus a Simple Android Application to create a option menu to display menu items using Android Studio is developed and executed successfully.
